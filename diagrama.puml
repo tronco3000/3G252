@@ -1,0 +1,44 @@
+@startuml
+class Juego
+class Jugador
+class Robot
+class EvilOtto 
+class Laberinto
+class Sala 
+class Pared
+class Dispar
+class Arma 
+class Interfaz
+class Controlador 
+class Puntaje 
+class Temporizador
+class EstadoJuego 
+class Fisico 
+class Sonido 
+class Graficos 
+class IAEnemigo 
+class DetectorColisiones
+class EntradaUsuario 
+Juego *-- Laberinto
+Juego *-- Interfaz
+Juego *-- Controlador
+Juego *-- EstadoJuego
+Laberinto *-- Sala
+Sala *-- Pared 
+Jugador *-- Arma
+Jugador *-- Puntaje
+Jugador *-- Temporizador
+Robot *-- Arma
+Interfaz *-- EntradaUsuario
+Controlador *-- Fisico
+Controlador *-- Sonido
+Controlador *-- Graficos
+Controlador *-- DetectorColisiones 
+Sala o-- Robot 
+Sala o-- Jugador
+Sala o-- EvilOtto 
+EstadoJuego o-- Temporizador
+EstadoJuego o-- Puntaje
+Robot o-- IAEnemigo 
+Disparo <|-- Arma
+@enduml     
