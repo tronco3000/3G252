@@ -5,8 +5,14 @@ bin/progama : src/main.cpp include/Foco.hpp include/EstadoFoco.hpp
 run : bin/programa
     ./bin/programa
 
-bin/memoria : src/main.cpp 
+bin/memoria : src/memoria.cpp 
     c++ src/memoria.cpp -o bin/memoria
 
 runMemoria : bin/memoria
     ./bin/memoria
+
+bin/ejemplo:src/ejemplo.cpp
+    c++ src/ejemplo.cpp -o bin/ejemplo -1 ftxui-dom -1 ftxui-component
+
+runEjemplo : bin/ejemplo
+./bin/ejemplo
