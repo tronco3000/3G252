@@ -1,0 +1,7 @@
+
+	# Crear bin y compilar
+mkdir -p bin && \
+g++ -Iinclude -std=c++17 -O2 -o bin/animacion src/animacion.cpp -lftxui-component -lftxui-dom -lftxui-screen
+
+# Ejecutar
+./bin/animacion
